@@ -29,7 +29,7 @@ This project implements an emotion classification pipeline using a Transformer e
 
 ````bash
 pip install torch torchvision torchaudio scikit-learn pandas nltk
-
+````
 Also, download NLTK data:
 
 ```python
