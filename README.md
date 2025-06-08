@@ -79,5 +79,5 @@ handler.test()
 ```python
 handler.load_checkpoint('checkpoints/model_epoch_30.pt')
 ```
-License
-````
+## License
+This project is open-source and free for anyone to use, modify, and distribute without restrictions.
