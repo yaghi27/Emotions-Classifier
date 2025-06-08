@@ -27,7 +27,7 @@ This project implements an emotion classification pipeline using a Transformer e
 
 ## Installation
 
-```bash
+````bash
 pip install torch torchvision torchaudio scikit-learn pandas nltk
 
 Also, download NLTK data:
@@ -82,3 +82,4 @@ Save/load checkpoints as needed:
 handler.load_checkpoint('checkpoints/model_epoch_30.pt')
 
 License
+````
