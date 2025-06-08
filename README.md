@@ -36,3 +36,49 @@ Also, download NLTK data:
 import nltk
 nltk.download('wordnet')
 nltk.download('omw-1.4')
+
+Usage
+Prepare your dataset as lists of texts and emotion labels.
+
+Initialize the data loader and preprocess data:
+
+```python
+from EmotionsDataLoader import EmotionsDataLoader
+
+data_loader = EmotionsDataLoader(batch_size=32, max_length=20, augment=True)
+train_loader, test_loader, vocab_size, vocab = data_loader.preprocess(texts, labels)
+
+
+Create the model:
+
+```python
+from EmotionClassifierModel import EmotionClassifierModel
+
+model = EmotionClassifierModel(
+    vocab_size=vocab_size,
+    embed_dim=128,
+    num_heads=8,
+    hidden_dim=512,
+    num_layers=2,
+    output_dim=num_classes,
+    dropout=0.1,
+    pad_idx=0,
+    max_length=20
+)
+
+Train and evaluate the model:
+
+```python
+from ModelHandler import ModelHandler
+
+handler = ModelHandler(model, train_loader, test_loader, learning_rate=0.002)
+handler.train(epochs=30)
+handler.test()
+
+
+Save/load checkpoints as needed:
+
+```python
+handler.load_checkpoint('checkpoints/model_epoch_30.pt')
+
+License
