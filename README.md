@@ -2,7 +2,6 @@
 
 A PyTorch-based Transformer model for text emotion classification with data augmentation and training utilities.
 
----
 
 ## Overview
 
@@ -12,7 +11,6 @@ This project implements an emotion classification pipeline using a Transformer e
 - Data loader with augmentation (synonym replacement and random deletion), tokenization, and padding.
 - Training and evaluation handler with checkpointing and learning rate scheduling.
 
----
 
 ## Features
 
@@ -23,7 +21,6 @@ This project implements an emotion classification pipeline using a Transformer e
 - Detailed classification reports with precision, recall, and F1-score.
 - Checkpoint saving and loading.
 
----
 
 ## Installation
 
